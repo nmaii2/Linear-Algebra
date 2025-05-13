@@ -12,7 +12,7 @@ function Upload({ setPcaResult }) {
     formData.append('file', file);
 
     try {
-      const res = await axios.post('http://127.0.0.1:5000/upload', formData);
+      const res = await axios.post('https://pca-backend-kmei.onrender.com/upload', formData);
       setPcaResult(res.data);
     } catch (err) {
       alert('Upload failed: ' + err.message);
